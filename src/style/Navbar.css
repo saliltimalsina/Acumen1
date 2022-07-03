@@ -1,0 +1,98 @@
+.mynav {
+  background-color: #1c1f22 !important;
+  box-shadow: 0 0.125rem 0.675rem rgba(255, 255, 255, 0.05);
+  font-size: 16px !important;
+  top: 0;
+  left: 0;
+ 
+}
+
+.navbar-brand {
+  color: white !important;
+  font-size: 1.2rem;
+}
+
+/* .mynav div span{
+    color: white !important;
+} */
+/* .navbar {
+  background-color: black !important;
+}
+
+
+.navbar-nav {
+  margin-left: auto !important;
+} */
+
+.mynav .navbar-nav .nav-link {
+  padding: 0 20px;
+  color: white !important;
+  transition: 0.3s ease;
+}
+
+.mynav .navbar-nav .nav-link:hover,
+.mynav i:hover,
+.mynav .navbar-nav .nav-link.active {
+  color: #ff7a00 !important;
+}
+.mynav i.active {
+  color: #ff7a00 !important;
+}
+/* 
+.fa-regular{
+  color: white !important;
+} */
+
+.mynav i {
+  color: white;
+  font-size: 1.2rem;
+  padding: 0 7px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+/* hamburger icon */
+.mynav .navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+#bar {
+  font-size: 1.9rem;
+  padding: 3px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+  color: white;
+}
+
+#bar:hover,
+#bar.active {
+  /* background-color: white; */
+  color: #1c1f22;
+}
+
+@media only screen and (max-width: 991px) {
+  #root > div > div:nth-child(1) > nav > div > button:hover,
+  #root > div > div:nth-child(1) > nav > div > button:focus {
+    background-color: #ff7a00;
+  }
+
+  #root > div > div:nth-child(1) > nav > div > button:hover #bar,
+  #root > div > div:nth-child(1) > nav > div > button:focus #bar {
+    color: white;
+  }
+
+  #navbarNav > ul {
+    margin: 1rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+
+  }
+
+  #navbarNav > ul > li:nth-child(n) > a{
+    padding: 10px 0;
+  }
+}
