@@ -1,0 +1,80 @@
+import axios from "axios";
+
+export const placeOrder = (token, subtotal) => (dispatch, getState) => {
+  const currentUser = getState().loginReducer.currentUserData;
+  const demoItems = getState().cartReducer.cartItems;
+  console.log("hey");
+  console.log(demoItems);
+  const cartItems = new Array();
+  const tok = JSON.parse(localStorage.getItem("currentUserToken"));
+
+  for (var i = 0; i < demoItems.length; i++) {
+    var item = {
+      name: demoItems[i].name,
+      quantity: demoItems[i].quantity,
+      price: demoItems[i].price,
+      productID: demoItems[i]._id,
+    };
+    cartItems.push(item);
+  }
+  dispatch({ type: "PLACE_ORDER_REQUEST" });
+  console.log(cartItems);
+  axios
+    .post("/api/orders/placeorder", {
+      token,
+      subtotal,
+      currentUser,
+      cartItems,
+      tok,
+    })
+    .then((res) => {
+      dispatch({ type: "PLACE_ORDER_SUCCESS" });
+      console.log(res);
+    })
+    .catch((err) => {
+      dispatch({ type: "PLACE_ORDER_FAILED" });
+    });
+};
+
+export const getOrdersUserById = () => (dispatch, getState) => {
+  dispatch({ type: "GET_ORDERSBYUSERID_REQUEST" });
+  const userid = getState().loginReducer.currentUserData._id;
+
+  axios
+    .post("/api/orders/getordersbyuserid", { userid: userid })
+    .then((res) => {
+      dispatch({ type: "GET_ORDERSBYUSERID_SUCCESS", payload: res.data });
+      console.log(res.data);
+    })
+    .catch((err) => {
+      dispatch({ type: "GET_ORDERSBYUSERID_FAILED", payload: err });
+    });
+};
+
+export const getOrderById = (orderid) => (dispatch, getState) => {
+  dispatch({ type: "GET_ORDERBYID_REQUEST" });
+
+  axios
+    .post("/api/orders/getorderbyid", { orderid: orderid })
+    .then((res) => {
+      dispatch({ type: "GET_ORDERBYID_SUCCESS", payload: res.data });
+      console.log(res.data);
+    })
+    .catch((err) => {
+      dispatch({ type: "GET_ORDERBYID_FAILED", payload: err });
+    });
+};
+
+export const getAllOrders = () => (dispatch) => {
+  dispatch({ type: "GET_ALLORDERS_REQUEST" });
+
+  axios
+    .get("/api/orders/getallorders")
+    .then((res) => {
+      dispatch({ type: "GET_ALLORDERS_SUCCESS", payload: res.data });
+      console.log(res.data);
+    })
+    .catch((err) => {
+      dispatch({ type: "GET_ALLORDERS_FAILED", payload: err });
+    });
+};
