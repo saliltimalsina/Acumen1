@@ -27,10 +27,10 @@ function Loginscreen() {
   }, []);
 
   return (
-    <div className="Form my-5 pt-5 mx-5">
+    <div className="Form my-5 pt-5 mx-5 bg-secondary">
       <div className="container">
         <div className="row  loginrow no-gutters">
-          <div className="col-lg-5">
+          <div className="col-lg-5" bg-info>
             <img src={loginbg} className="img-fluid login-img" />
           </div>
           <div className="col-lg-7 px-5 pt-5">
@@ -99,45 +99,5 @@ function Loginscreen() {
 export default Loginscreen;
 
 {
-  /* <div className="row justify-content-center mt-5">
-        <div className="col-md-5">
-          <div className="form bs">
-            <h2>Login</h2>
-            {error && (<Error error="Invalid Credentials"></Error>)}
 
-            {loading && (<Loader></Loader>)}
-
-            <form onSubmit={login}>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="username"
-                required
-                value={username}
-                onChange={(e) => {
-                  setusername(e.target.value);
-                }}
-              />
-              <input
-                type="password"
-                className="form-control"
-                placeholder="password"
-                required
-                value={password}
-                onChange={(e) => {
-                  setpassword(e.target.value);
-                }}
-              />
-
-              <button type="submit" className="btn btn-primary mt-3">
-                Login
-              </button>
-              <p>
-                Already have an account?
-                <a href="/register">Register</a>
-              </p>
-            </form>
-          </div>
-        </div>
-      </div> */
 }
