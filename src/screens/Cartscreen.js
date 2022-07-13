@@ -15,11 +15,11 @@ export default function () {
   );
 
   return (
-    <div className="mt-5 py-4 container-fluid">
+    <div className="mt-5 py-4 container-fluid bg-info">
       <div className="row mt-5 justify-content-center">
-        <div className="col-md-8 my-cart">
-          <h2 className="text-center m-5">My Cart</h2>
-          <table className="table table-bordered ">
+        <div className="col-md-8 my-cart bg-primary">
+          <h2 className="text-center m-5" style={{fontSize:"80px",fontweight:"bold",color:"red",}}>Book Cart</h2>
+          <table className="table  bg-success ">
             <thead>
               <tr>
                 <th>Name</th>
