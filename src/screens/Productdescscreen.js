@@ -66,9 +66,9 @@ export default function Productdescscreen() {
               <button className="buy-btn ml-3" onClick={addtocart}>
                 Add to Cart
               </button>
-              <button className="btn btn-dark" onClick={addtocart}>
+              {/* <button className="btn btn-dark" onClick={addtocart}>
                 Add to cart
-              </button>
+              </button> */}
 
               <h4 className="mt-5 mb-4">Product Details</h4>
 
