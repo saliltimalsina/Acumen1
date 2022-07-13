@@ -19,8 +19,8 @@ export default function OrdersList() {
     <div>
       {loading && <Loader />}
       {error && <Error msg="Something went wrong" />}
-      <h2>Orders list</h2>
-      <table className="table table-bordered">
+      <h2 style={{fontSize:"80px",fontweight:"bold",color:"red",}}>Orders list</h2>
+      <table className="table bg-success">
         <thead>
           <tr>
             <th>Order id</th>
