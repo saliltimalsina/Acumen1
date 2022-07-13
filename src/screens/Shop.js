@@ -29,7 +29,7 @@ export default function Shop() {
 
   return (
     <div>
-      <div className="container ">
+      <div className="container bg-primary">
       <Filter />
         <div className="row justify-content-center mt-2 pt-2">
           {loading ? (
