@@ -37,7 +37,6 @@ export default function Shop() {
           ) : error ? (
             <Error error="Something went wrong" />
           ) : (
-            // <h1>Error</h1>
 
             products.map((product) => {
               return <Product key={product._id} product={product}></Product>;
