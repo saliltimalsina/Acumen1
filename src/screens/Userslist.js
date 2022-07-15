@@ -21,6 +21,7 @@ export default function Userslist() {
       <table className="table table-bordered">
         <thead>
           <tr>
+            {/* // <th>Id</th> */}
             <th>User Id</th>
             <th>Name</th>
             <th>Email</th>
