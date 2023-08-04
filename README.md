@@ -23,3 +23,5 @@ The term "e-commerce" refers to businesses and individuals that purchase and res
 ![Screenshot 2023-08-04 231227](https://github.com/saliltimalsina/Acumen1/assets/67036019/db236371-34e6-449c-929a-ad29fce4b346)
 ![Screenshot 2023-08-04 231303](https://github.com/saliltimalsina/Acumen1/assets/67036019/b63ebe31-b293-4503-9178-6eb4cdd61631)
 ![Screenshot 2023-08-04 231342](https://github.com/saliltimalsina/Acumen1/assets/67036019/30c130ee-51e9-494a-815b-528a573d4846)
+![image](https://github.com/saliltimalsina/Acumen1/assets/67036019/91158742-8b5f-4ddb-9ef1-fa87b631d32d)
+
